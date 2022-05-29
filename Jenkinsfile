@@ -16,7 +16,7 @@ node('workers'){
     }
 
     stage('Coverage Reports'){
-        sh "docker run --rm -v $PWD/coverage:/app/coverage ${imageName}-test npm run coverage-text"
+        sh "docker run --rm -v $PWD/coverage:/app/coverage ${imageName}-test npm run coverage-html"
         publishHTML (target: [
             allowMissing: false,
             alwaysLinkToLastBuild: false,
