@@ -7,7 +7,7 @@ COPY package-lock.json .
 COPY package.json .
 
 #RUN npm i -g
-#RUN npm i -g eslint
 RUN npm i
+RUN npm i -g eslint
 
 COPY . .
