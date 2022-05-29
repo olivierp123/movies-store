@@ -15,4 +15,8 @@ node('workers'){
         sh "docker run --rm ${imageName}-test npm run test"
     }
 
+    stage('Coverage Reports'){
+        sh "docker run --rm ${imageName}-test npm run coverage-text"
+    }
+
 }
