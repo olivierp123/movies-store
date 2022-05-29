@@ -1,1 +1,2 @@
 # movies-store
+Movies Store
