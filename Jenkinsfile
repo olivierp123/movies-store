@@ -13,4 +13,10 @@ node('workers'){
         }
     }
 
+    stage('Integration Tests'){
+        imageTest.inside{
+	    sh 'npm run test'
+        }
+    }
+
 }
