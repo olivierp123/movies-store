@@ -15,7 +15,7 @@ node('workers'){
 
     stage('Integration Tests'){
         imageTest.inside{
-            withEnv(["NODE_PATH=/usr/local/lib/node_modules"]) {
+            withEnv(["NODE_PATH=/app/node_modules:/usr/local/lib/node_modules"]) {
 	         sh 'npm run test'
             }
         }
